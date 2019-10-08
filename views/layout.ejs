@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dinosaurs</title>
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <a href="/">HOME</a> | 
-        <a href="/dinosaurs">ALL DINOS</a> |
-    </nav>
-    <%- body %>
+    <header>
+        <h1>My Dinosaur and Cryptic App</h1>
+        <nav>
+            <a href="/">HOME</a> | 
+            <a href="/dinosaurs">ALL DINOS</a> |
+            <a href="/dinosaurs/new">Add a Dino here</a>
+        </nav>
+    </header>
+    <main>
+            <%- body %>
+    </main>
+    <footer>
+        Copyleft 2019 Hunter Productions
+    </footer>
+    
 </body>
 </html>

@@ -8,4 +8,17 @@ router.get('/', function(req, res) {
     res.render('dinosaurs/index', {dinos: dinoData});
 });
 
+router.get('/new', function(req, res) {
+    res.render('dinosaurs/new');
+})
+
+//route parameter
+router.get('/:id', function(req, res) {
+    var index = parseInt(req.params.id);
+    var dinos = fs.readFileSync('./dinosaurs.json');
+    var dinoData = JSON.parse(dinos);
+    //this is the ShowRoot.ejs
+    res.render('dinosaurs/show', {dino: dinoData[index]});
+})
+
 module.exports = router;
